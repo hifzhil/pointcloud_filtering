@@ -1,0 +1,17 @@
+<launch>
+    <node
+        pkg="lidar_processing"
+        name="lidar_processing"
+        type="lidar_processing"
+        output="screen"
+    />
+
+    <node 
+        pkg="rviz" 
+        type="rviz" 
+        name="rviz" 
+        output="screen" 
+        args="-d $(find lidar_processing)/rviz/lidar_processing.rviz"
+    />
+  </launch>
+  
